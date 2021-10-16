@@ -8,7 +8,12 @@ Best ones - Top 100 liked problems;
 Start with easy -> hard DS (arrays, stack, queue -> heaps);
 Dont spend in one problem hours and hours, look at the solution
 
-Create a repo for the solutions
+Create a repo for the solutions: https://github.com/programja/int_coding
+
+Will do 50 of 100 Liked questions
+Will do 50 of 100 Interview questions
+
+LIKED:
 
 1. Problem definition: Two Sum
 Given: Array of integers and an integer target, return indices of the two numbers such that they add up to target.
