@@ -1,0 +1,35 @@
+Answers in Java
+Problem definitions above solution, will notify when sub- or optimal per performance/space.
+Per how to approach:
+
+Start with easy problems (maybe one month, 20 - 30 problems, top-100 liked/interview questions);
+Per interviews: Stick to medium
+Best ones - Top 100 liked problems;
+Start with easy -> hard DS (arrays, stack, queue -> heaps);
+Dont spend in one problem hours and hours, look at the solution
+
+Create a repo for the solutions
+
+1. Problem definition:
+
+Solution:
+
+2. Problem definition:
+
+Solution:
+
+3. Problem definition:
+
+Solution:
+
+4. Problem definition:
+
+Solution:
+
+5. Problem definition:
+
+Solution:
+
+6. Problem definition:
+
+Solution:
