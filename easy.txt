@@ -15,7 +15,7 @@ Will do 50 of 100 Interview questions
 
 LIKED:
 
-1. Problem definition: Two Sum
+1. Problem definition: Two Sum 10/18
 Given: Array of integers and an integer target, return indices of the two numbers such that they add up to target.
 One solution, cannot use the same element twice.
 
@@ -41,9 +41,18 @@ class Solution {
     }
 }
 
-2. Problem definition:
+2. Problem definition: Merge Two Sorted Lists 10/20
+Merge two sorted lists and return it as a sorted list.
+The list should be made by splicing together the nodes of the first two lists.
+
+Data Structure: ListNode [Java LinkedLists]
+
+Problem I am having is understanding how to deal with ListNodes.
+Very little documentation that works.
 
 Solution:
+
+
 
 3. Problem definition:
 
