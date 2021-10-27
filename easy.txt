@@ -41,7 +41,7 @@ class Solution {
     }
 }
 
-2. Problem definition: Merge Two Sorted Lists 10/20
+*** COME BACK TO 2. Problem definition: Merge Two Sorted Lists 10/20
 Merge two sorted lists and return it as a sorted list.
 The list should be made by splicing together the nodes of the first two lists.
 
@@ -84,9 +84,49 @@ class Solution {
 
 
 
-3. Problem definition:
+3. Problem definition: Merge Two Binary Trees
+You are given two binary trees root1 and root2.
+
+Imagine that when you put one of them to cover the other, some nodes of the two trees are overlapped while the others are not. You need to merge the two trees into a new binary tree. The merge rule is that if two nodes overlap, then sum node values up as the new value of the merged node. Otherwise, the NOT null node will be used as the node of the new tree.
 
 Solution:
+A)
+
+*** HOW TO TRAVERSE A TREENODE OR SIMILAR BINARY TREE STRUTCURE ***
+
+/**
+ * Definition for a binary tree node.
+ * public class TreeNode {
+ *     int val;
+ *     TreeNode left;
+ *     TreeNode right;
+ *     TreeNode() {}
+ *     TreeNode(int val) { this.val = val; }
+ *     TreeNode(int val, TreeNode left, TreeNode right) {
+ *         this.val = val;
+ *         this.left = left;
+ *         this.right = right;
+ *     }
+ * }
+ */
+class Solution {
+    public TreeNode mergeTrees(TreeNode root1, TreeNode root2) {
+
+        if (root1 == null) { return root2; };
+        if (root2 == null) { return root1; };
+
+        root1.val += root2.val;
+        root1.left = mergeTrees(root1.left, root2.left);
+        root1.right = mergeTrees(root1.right, root2.right);
+
+        return root1;
+    }
+}
+
+This checks the roots first. If both are not null, it simply adds root2 to root1. If one is null, it is an empty tree and returns the other.
+It then recurses on either side of the BTREE using the 'root1.left' as the TreeNode root (all sub-trees are also trees) and root2.left as the new TreeNode root.
+i.e. the if (root1 == null) { return root2; }; works to side-step any nulls as we travel down the TreeNodes.
+KEEP IN MIND: While root1.left returns ALL of the values of the LEFT subtree (LEFT TreeNodes) - but can only pull the VALUE (val) from the current working root.
 
 4. Problem definition:
 
