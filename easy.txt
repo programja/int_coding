@@ -92,8 +92,6 @@ Imagine that when you put one of them to cover the other, some nodes of the two 
 Solution:
 A)
 
-*** HOW TO TRAVERSE A TREENODE OR SIMILAR BINARY TREE STRUTCURE ***
-
 /**
  * Definition for a binary tree node.
  * public class TreeNode {
@@ -127,6 +125,20 @@ This checks the roots first. If both are not null, it simply adds root2 to root1
 It then recurses on either side of the BTREE using the 'root1.left' as the TreeNode root (all sub-trees are also trees) and root2.left as the new TreeNode root.
 i.e. the if (root1 == null) { return root2; }; works to side-step any nulls as we travel down the TreeNodes.
 KEEP IN MIND: While root1.left returns ALL of the values of the LEFT subtree (LEFT TreeNodes) - but can only pull the VALUE (val) from the current working root.
+
+3.5 Double Hashing Python Code:
+
+def h(k,i):
+  return (k + i*(1 + k % 10)) % 11
+
+def go():
+  array = [10,22,31,4,15,28,17,88,59,64]
+  for k in array:
+    for i in range(10):
+      print("k: ",k," | ",h(k,i))
+  print(" ")
+
+This prints probing sequences for the array. Array could be set to input different values as well.
 
 4. Problem definition:
 
