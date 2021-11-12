@@ -141,8 +141,62 @@ def go():
 This prints probing sequences for the array. Array could be set to input different values as well.
 
 4. Problem definition:
+Given a string s containing just the characters '(', ')', '{', '}', '[' and ']', determine if the input string is valid.
+An input string is valid if:
+Open brackets must be closed by the same type of brackets.
+Open brackets must be closed in the correct order.
 
 Solution:
+Explained:  If the 'brackets' from String: (, [ or { --> push to the Stack (one at a time)
+            If the 'brackets' from String: ), ] or } --> pop from Stack and compare
+              If they do not form a pair --> return false
+              If they do form a pair, continue
+                If the end of the string is reached and Stack isEmpty() --> return true
+
+
+class Solution {
+    public boolean isValid(String s) {
+
+        Deque<Character> stack = new ArrayDeque<Character>();
+
+        // Traversing the Expression
+        for (int i = 0; i < s.length(); i++) {
+        
+            char x = s.charAt(i);
+
+            if (x == '(' || x == '[' || x == '{') {
+                // Push the element in the stack
+                stack.push(x);
+                continue;
+            }
+
+            if (stack.isEmpty())
+                return false;
+
+            char check;
+            switch (x) {
+            case ')':
+                check = stack.pop();
+                if (check == '{' || check == '[')
+                    return false;
+                break;
+
+            case '}':
+                check = stack.pop();
+                if (check == '(' || check == '[')
+                    return false;
+                break;
+
+            case ']':
+                check = stack.pop();
+                if (check == '(' || check == '{')
+                    return false;
+                break;
+            }
+        }
+        return (stack.isEmpty());
+    }
+}
 
 5. Problem definition:
 
